@@ -1,4 +1,4 @@
-### *learnhub* - A Django-based elearning-platform to maintain all your study-related stuff clustered at one place.
+## *learnhub* - A Django-based elearning-platform to maintain all your study-related stuff clustered at one place.
 
 #### Deployed version - https://learnhub-elearning.herokuapp.com/
 
