@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="container text-center">
+  {% if user.is_authenticated %}
+  <h3>Welcome, <span class="text-uppercase">{{user.username}}</span> </h3>
+  <hr>
+  {% endif %}
+
+  <br>
+  <div class="row">
+    <div class="col-md-4">
+      <a href="{% url 'notes' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/notes.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Notes
+            </h5>
+            Create Notes to refer them later. They are stored permanently until deleted
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="{% url 'assignment' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/assignment.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Assignments
+            </h5>
+            Add assignments with deadlines. They will be displayed prioritised by deadlines
+          </div>
+        </div>
+      </a>
+    </div>
+    
+    <div class="col-md-4">
+      <a href="{% url 'todo' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/todo.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              To Do
+            </h5>
+            Add your to-do lists for your day and remove them as you finish
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+  <br><br><br>
+
+
+  <div class="row pb-5">
+
+    <div class="col-md-4">
+      <a href="{% url 'youtube' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/youtube.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Youtube
+            </h5>
+            Search Youtube and select your desired video to play it on youtube
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-md-4">
+      <a href="{% url 'books' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/books.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Books
+            </h5>
+            Browse books from a list of neatly organised book menu
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+    <div class="col-md-4">
+      <a href="{% url 'dict' %}">
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/dictionary.jpg' %}" alt="Notes image">
+          <div class="card-body">
+            <h5 class="card-title ">
+              Dictionary
+            </h5>
+            A vocabulary from a book is troubling you? No problem,just enter the word.
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+
+</section>
+{% endblock content %}
